@@ -14,21 +14,21 @@
             <div class="card-body">
                 <div class="row">
                     <div class="row">
-                        <label for="inputState" class="form-label">จังหวัด: </label>
+                        <label for="inputState" class="form-label">'จังหวัด' </label>
                         <select v-model="getProvinceInput" id="inputState" class="form-select" @click="clickSelectProvince">
                             <option disabled value="">กดเลือกจังหวัด</option>
                             <option v-for="province in provinceKeyArray" :value="province">{{ province }}</option>
                         </select>
                     </div>
                     <div class="row">
-                        <label for="inputState" class="form-label">อำเภอ: </label>
+                        <label for="inputState" class="form-label">'อำเภอ'</label>
                         <select v-model="getDistrictInput" id="inputState" class="form-select" @click="clickSelectDistrict">
                           <option disabled value="">กดเลือกอำเภอ</option>
                           <option v-for="district in districtKeyArray" :value="district" >{{ district }}</option>
                         </select>
                     </div>
                     <div class="row">
-                        <label for="inputState" class="form-label">ตำบล: </label>
+                        <label for="inputState" class="form-label">'ตำบล' </label>
                         <select v-model="getSubdistrictInput" id="inputState" class="form-select" @click="clickSelectSubdistrict">
                           <option disabled value="">กดเลือกตำบล</option>
                           <option v-for="subdistrict in subDistrictArray">{{ subdistrict }}</option>
