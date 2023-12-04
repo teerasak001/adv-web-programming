@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select/Deselect All Checkboxes</title>
+</head>
+<body>
+    <label>
+        <h1>Select All Checkbox</h1>
+        <input type="checkbox" id="selectAll"> กดเลือกทั้งหมดได้นะ
+    </label>
+
+    <br>
+    <label>
+        <input type="checkbox" class="checkbox">  นม
+    </label><br>
+    <label>
+        <input type="checkbox" class="checkbox">  กาแฟ
+    </label><br>
+    <label>
+        <input type="checkbox" class="checkbox">  ชาไข่มุก
+    </label><br>
+    <label>
+        <input type="checkbox" class="checkbox">  มาม่า
+    </label><br>
+    <label>
+        <input type="checkbox" class="checkbox">  ชาบู
+    </label><br>
+    <label>
+        <input type="checkbox" class="checkbox"> ซอยจุ๊
+    </label>
+
+    <script>
+
+        const selectAllCheckbox = document.getElementById('selectAll');
+        const checkboxes = document.querySelectorAll('.checkbox');
+        selectAllCheckbox.addEventListener('change', function () {
+            checkboxes.forEach(checkbox => {
+                checkbox.checked = selectAllCheckbox.checked;
+            });
+        });
+    </script>
+</body>
+</html>
